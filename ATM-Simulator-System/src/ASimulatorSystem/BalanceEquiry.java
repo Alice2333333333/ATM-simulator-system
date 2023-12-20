@@ -12,6 +12,8 @@ class BalanceEnquiry extends JFrame implements ActionListener {
     JButton b1, b2, b3;
     JLabel l1, l2, l3;
     String pin;
+    String name ="Ben";
+    int age = 0;
 
     BalanceEnquiry(String pin) {
         this.pin = pin;
