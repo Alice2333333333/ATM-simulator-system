@@ -43,7 +43,14 @@ public class MiniStatement extends JFrame implements ActionListener{
             Conn c1  = new Conn();
             ResultSet rs = c1.s.executeQuery("SELECT * FROM bank where pin = '"+pin+"'");
             while(rs.next()){
-                l1.setText(l1.getText() + "<html>"+rs.getString("date")+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + rs.getString("mode") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + rs.getString("amount") + "<br><br><html>");
+                l1.setText(
+                		l1.getText() + "<html>"+rs.getString("date")+ 
+                		"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + 
+                		rs.getString("mode") + 
+                		"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" 
+                		+ rs.getString("amount") + 
+                		"<br><br><html>"
+                		);
                 if(rs.getString("mode").equals("Deposit")){
                     balance += Integer.parseInt(rs.getString("amount"));
                 }else{
