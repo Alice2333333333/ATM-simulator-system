@@ -14,7 +14,7 @@ public class Withdrawl extends JFrame implements ActionListener {
     JLabel l1, l2, l3, l4;
     String pin;
 
-    Withdrawl(String pin) {
+    public Withdrawl(String pin) {
         this.pin = pin;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
@@ -63,12 +63,19 @@ public class Withdrawl extends JFrame implements ActionListener {
         setVisible(true);
     }
 
+    public Withdrawl() {
+    }
+
     public void actionPerformed(ActionEvent ae) {
         try {
             String amount = t1.getText();
             Date date = new Date();
             if (ae.getSource() == b1) {
-                withdrawMoney(amount, pin, date);
+                if (t1.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null, "Please enter the Amount to you want to Withdraw");
+                } else {
+                    withdrawMoney(amount, pin, date);
+                }
             } else if (ae.getSource() == b2) {
                 setVisible(false);
                 new Transactions(pin).setVisible(true);
@@ -80,33 +87,32 @@ public class Withdrawl extends JFrame implements ActionListener {
 
     }
 
-    public void withdrawMoney(String amount, String pin, Date date) throws SQLException{
-        if (t1.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Please enter the Amount to you want to Withdraw");
-        } else {
-            Conn c1 = new Conn();
+    public void withdrawMoney(String amount, String pin, Date date) throws SQLException {
 
-            ResultSet rs = c1.s.executeQuery("select * from bank where pin = '" + pin + "'");
-            int balance = 0;
-            while (rs.next()) {
-                if (rs.getString("mode").equals("Deposit")) {
-                    balance += Integer.parseInt(rs.getString("amount"));
-                } else {
-                    balance -= Integer.parseInt(rs.getString("amount"));
-                }
+        Conn c1 = new Conn();
+
+        ResultSet rs = c1.s.executeQuery("select * from bank where pin = '" + pin + "'");
+        int balance = 0;
+        while (rs.next()) {
+            if (rs.getString("type").equals("Deposit")) {
+                balance += Integer.parseInt(rs.getString("amount"));
+            } else {
+                balance -= Integer.parseInt(rs.getString("amount"));
             }
-            if (balance < Integer.parseInt(amount)) {
-                JOptionPane.showMessageDialog(null, "Insuffient Balance");
-                System.out.println("Insufficient balance");
-            }
-
-            c1.s.executeUpdate(
-                    "insert into bank values('" + pin + "', '" + date + "', 'Withdrawl', '" + amount + "')");
-            JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully");
-
-            setVisible(false);
-            new Transactions(pin).setVisible(true);
         }
+        if (balance < Integer.parseInt(amount)) {
+            JOptionPane.showMessageDialog(null, "Insuffient Balance");
+            System.out.println("Insufficient balance");
+            System.out.println("Your current balance is: " + balance);
+        }
+
+        c1.s.executeUpdate(
+                "insert into bank values('" + pin + "', '" + date + "', 'Withdrawl', '" + amount + "')");
+        JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully");
+        System.out.println("Debited Successfully");
+        System.out.println("Your current balance is: " + balance);
+        setVisible(false);
+        new Transactions(pin).setVisible(true);
     }
 
     public static void main(String[] args) {
