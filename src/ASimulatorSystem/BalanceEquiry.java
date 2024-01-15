@@ -14,8 +14,6 @@ class BalanceEnquiry extends JFrame implements ActionListener {
     String pin;
     String address = "Malaysia";
     int postcode = 12345;
-    String name ="Ben";
-    int age = 0;
 
     BalanceEnquiry(String pin) {
         this.pin = pin;
