@@ -77,7 +77,7 @@ public class Deposit extends JFrame implements ActionListener {
         try {
             String amount = t1.getText();
             Date date = new Date();
-            if (ae.getSource() == b1) {
+            if (ae.getSource().equals(b1)) {
                 if (t1.getText().equals("")) {
                     JOptionPane.showMessageDialog(
                             null, "Please enter the Amount to you want to Deposit");
@@ -90,7 +90,7 @@ public class Deposit extends JFrame implements ActionListener {
                     setVisible(false);
                     new Transactions(pin).setVisible(true);
                 }
-            } else if (ae.getSource() == b2) {
+            } else if (ae.getSource().equals(b2)) {
                 setVisible(false);
                 new Transactions(pin).setVisible(true);
             }

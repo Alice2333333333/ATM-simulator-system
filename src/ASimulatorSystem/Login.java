@@ -105,7 +105,7 @@ public class Login extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         try {
-            if (ae.getSource() == b1) {
+            if (ae.getSource().equals(b1)) {
                 Conn c1 = new Conn();
                 String cardno = tf1.getText();
                 String pin = pf2.getText();
@@ -121,10 +121,10 @@ public class Login extends JFrame implements ActionListener {
                     JOptionPane.showMessageDialog(
                             null, "Incorrect Card Number or PIN");
                 }
-            } else if (ae.getSource() == b2) {
+            } else if (ae.getSource().equals(b2)) {
                 tf1.setText("");
                 pf2.setText("");
-            } else if (ae.getSource() == b3) {
+            } else if (ae.getSource().equals(b3)) {
                 setVisible(false);
                 new Signup().setVisible(true);
             }

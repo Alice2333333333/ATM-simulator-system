@@ -288,7 +288,7 @@ public class Signup3 extends JFrame implements ActionListener {
         }
 
         try {
-            if (ae.getSource() == b1) {
+            if (ae.getSource().equals(b1)) {
 
                 if (atype.equals("")) {
                     JOptionPane.showMessageDialog(
@@ -312,7 +312,7 @@ public class Signup3 extends JFrame implements ActionListener {
                     setVisible(false);
                 }
 
-            } else if (ae.getSource() == b2) {
+            } else if (ae.getSource().equals(b2)) {
                 System.exit(0);
             }
 

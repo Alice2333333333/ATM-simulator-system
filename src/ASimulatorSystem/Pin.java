@@ -128,7 +128,7 @@ public class Pin extends JFrame implements ActionListener {
                 setVisible(false);
                 new Transactions(rpin).setVisible(true);
 
-            } else if (ae.getSource() == b2) {
+            } else if (ae.getSource().equals(b2)) {
                 new Transactions(pin).setVisible(true);
                 setVisible(false);
             }
