@@ -105,7 +105,7 @@ public class Withdrawl extends JFrame implements ActionListener {
             System.out.println("Insufficient balance");
             System.out.println("Your current balance is: " + balance);
         }
-
+        
         c1.s.executeUpdate(
                 "insert into bank values('" + pin + "', '" + date + "', 'Withdrawl', '" + amount + "')");
         JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully");
