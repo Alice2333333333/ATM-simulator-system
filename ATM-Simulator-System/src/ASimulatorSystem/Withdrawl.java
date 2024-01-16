@@ -86,7 +86,8 @@ public class Withdrawl extends JFrame implements ActionListener {
 
     }
 
-    public void withdrawMoney(String amount, String pin, Date date) throws SQLException {
+    public void withdrawMoney(String amount, String pin, 
+    						  Date date) throws SQLException {
 
         Conn c1 = new Conn();
 
@@ -106,7 +107,8 @@ public class Withdrawl extends JFrame implements ActionListener {
         }
 
         c1.s.executeUpdate(
-                "insert into bank values('" + pin + "', '" + date + "', 'Withdrawl', '" + amount + "')");
+                "insert into bank values('" + pin + "', '" + date 
+                + "', 'Withdrawl', '" + amount + "')");
         JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully");
         System.out.println("Debited Successfully");
         System.out.println("Your current balance is: " + balance);
