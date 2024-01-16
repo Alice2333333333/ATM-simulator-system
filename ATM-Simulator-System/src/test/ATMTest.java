@@ -17,8 +17,11 @@ public class ATMTest{
     Withdrawl withdrawl = new Withdrawl();
 
     ByteArrayOutputStream outstream = new ByteArrayOutputStream();
+    
     ByteArrayOutputStream errstream = new ByteArrayOutputStream();
+    
     PrintStream out = System.out;
+    
     PrintStream err = System.err;
 
     @Before
