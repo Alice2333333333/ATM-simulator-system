@@ -8,11 +8,16 @@ import java.util.*;
 
 class BalanceEnquiry extends JFrame implements ActionListener {
 
-    JTextField t1, t2;
+	JTextField t1;
+	JTextField t2;
 
-    JButton b1, b2, b3;
+	JButton b1;
+	JButton b2;
+	JButton b3;
 
-    JLabel l1, l2, l3;
+	JLabel l1;
+	JLabel l2;
+	JLabel l3;
 
     String pin;
 
@@ -50,10 +55,11 @@ class BalanceEnquiry extends JFrame implements ActionListener {
                     balance -= Integer.parseInt(rs.getString("amount"));
                 }
             }
-        } catch (Exception e) {
+        }catch(Exception e){
+System.out.println(e);
         }
-
-        l1.setText("Your Current Account Balance is Rs " + balance);
+        
+        l1.setText("Your Current Account Balance is Rs "+balance);
 
         b1.addActionListener(this);
 
