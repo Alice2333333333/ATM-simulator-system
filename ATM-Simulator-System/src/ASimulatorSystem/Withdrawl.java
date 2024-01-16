@@ -95,7 +95,7 @@ public class Withdrawl extends JFrame implements ActionListener {
         Conn c1 = new Conn();
 
         ResultSet rs = c1.s.executeQuery
-        		       ("select * from bank where pin = '" + pin + "'");
+                       ("select * from bank where pin = '" + pin + "'");
         int balance = 0;
         while (rs.next()) {
             if (rs.getString("type").equals("Deposit")) {

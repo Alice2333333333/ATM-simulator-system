@@ -131,9 +131,9 @@ public final class Practice {
                         textArea.setFont(new Font("Monospaced", Font.BOLD, 5));
                         textArea.setEditable(false);
                         final JDialog dialog = new JOptionPane
-                        		(new JScrollPane(textArea), 
-                                 JOptionPane.PLAIN_MESSAGE).createDialog
-                        		(Practice.class.getName());
+                                               (new JScrollPane(textArea), 
+                                               JOptionPane.PLAIN_MESSAGE).createDialog
+                                               (Practice.class.getName());
                         dialog.setResizable(true);
                         dialog.setVisible(true);
                     } catch (Exception e) {

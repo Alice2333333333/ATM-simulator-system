@@ -115,8 +115,8 @@ public class Signup2 extends JFrame implements ActionListener{
         c3.setFont(new Font("Raleway", Font.BOLD, 14));
         
         String education[] = {"Non-Graduate","Graduate",
-        		              "Post-Graduate","Doctrate",
-        		              "Others"};
+                              "Post-Graduate","Doctrate",
+                              "Others"};
         c4 = new JComboBox(education);
         c4.setBackground(Color.WHITE);
         c4.setFont(new Font("Raleway", Font.BOLD, 14));

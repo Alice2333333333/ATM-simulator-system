@@ -268,8 +268,8 @@ public class Signup3 extends JFrame implements ActionListener{
                 }else{
                     Conn c1 = new Conn();
                     String q1 = "insert into signupthree values('"+formno+"',"
-                    		    + " '"+atype+"','"+cardno+"','"+pin+"','"
-                    		    +facility+"')";  
+                                + " '"+atype+"','"+cardno+"','"+pin+"','"
+                                +facility+"')";  
                     String q2 = "insert into login values('"+formno+"',"
                     		    + "  '"+cardno+"','"+pin+"')";
                     c1.s.executeUpdate(q1);
