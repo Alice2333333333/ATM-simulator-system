@@ -50,7 +50,7 @@ class BalanceEnquiry extends JFrame implements ActionListener {
                 }
             }
         }catch(Exception e){
-        	System.out.println(e);
+System.out.println(e);
         }
         
         l1.setText("Your Current Account Balance is Rs "+balance);
