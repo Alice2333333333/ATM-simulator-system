@@ -21,7 +21,7 @@ public class Signup3 extends JFrame implements ActionListener{
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource
                        ("ASimulatorSystem/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance
-        		   (100, 100, Image.SCALE_DEFAULT);
+                   (100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l14 = new JLabel(i3);
         l14.setBounds(150, 0, 100, 100);

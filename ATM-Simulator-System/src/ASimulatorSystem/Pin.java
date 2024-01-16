@@ -17,7 +17,7 @@ public class Pin extends JFrame implements ActionListener{
         ImageIcon i1 = new ImageIcon
                        (ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance
-        		(1000, 1180, Image.SCALE_DEFAULT);
+                   (1000, 1180, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l4 = new JLabel(i3);
         l4.setBounds(0, 0, 960, 1080);
