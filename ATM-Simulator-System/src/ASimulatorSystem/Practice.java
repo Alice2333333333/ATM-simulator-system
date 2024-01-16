@@ -132,7 +132,7 @@ public final class Practice {
                         textArea.setEditable(false);
                         final JDialog dialog = new JOptionPane
                                                (new JScrollPane(textArea), 
-                                               JOptionPane.PLAIN_MESSAGE).createDialog
+                                                JOptionPane.PLAIN_MESSAGE).createDialog
                                                (Practice.class.getName());
                         dialog.setResizable(true);
                         dialog.setVisible(true);

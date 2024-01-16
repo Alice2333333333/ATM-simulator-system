@@ -271,7 +271,7 @@ public class Signup3 extends JFrame implements ActionListener{
                                 + " '"+atype+"','"+cardno+"','"+pin+"','"
                                 +facility+"')";  
                     String q2 = "insert into login values('"+formno+"',"
-                    		    + "  '"+cardno+"','"+pin+"')";
+                                 + "  '"+cardno+"','"+pin+"')";
                     c1.s.executeUpdate(q1);
                     c1.s.executeUpdate(q2);
                     JOptionPane.showMessageDialog(null, "Card Number: " 

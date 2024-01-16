@@ -114,7 +114,7 @@ public class Withdrawl extends JFrame implements ActionListener {
                 "insert into bank values('" + pin + "', '" + date 
                 + "', 'Withdrawl', '" + amount + "')");
         JOptionPane.showMessageDialog(null, "Rs. " + amount 
-        		                      + " Debited Successfully");
+                                      + " Debited Successfully");
         System.out.println("Debited Successfully");
         System.out.println("Your current balance is: " + balance);
         setVisible(false);
