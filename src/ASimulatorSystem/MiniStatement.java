@@ -36,7 +36,9 @@ public class MiniStatement extends JFrame implements ActionListener{
             while(rs.next()){
                 l3.setText("Card Number:    " + rs.getString("cardno").substring(0, 4) + "XXXXXXXX" + rs.getString("cardno").substring(12));
             }
-        }catch(Exception e){}
+        }catch(Exception e){
+System.out.println(e);
+        }
         	 
         try{
             int balance = 0;
