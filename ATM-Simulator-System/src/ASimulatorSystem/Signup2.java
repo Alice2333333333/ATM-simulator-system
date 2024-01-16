@@ -16,8 +16,11 @@ public class Signup2 extends JFrame implements ActionListener{
     String formno;
     Signup2(String formno){
         
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
+        ImageIcon i1 = new ImageIcon
+        		       (ClassLoader.getSystemResource
+        		       ("ASimulatorSystem/icons/logo.jpg"));
+        Image i2 = i1.getImage().getScaledInstance
+        		   (100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l14 = new JLabel(i3);
         l14.setBounds(150, 0, 100, 100);
@@ -104,17 +107,23 @@ public class Signup2 extends JFrame implements ActionListener{
         c2.setBackground(Color.WHITE);
         c2.setFont(new Font("Raleway", Font.BOLD, 14));
         
-        String income[] = {"Null","<1,50,000","<2,50,000","<5,00,000","Upto 10,00,000","Above 10,00,000"};
+        String income[] = {"Null","<1,50,000","<2,50,000",
+        		           "<5,00,000","Upto 10,00,000",
+        		           "Above 10,00,000"};
         c3 = new JComboBox(income);
         c3.setBackground(Color.WHITE);
         c3.setFont(new Font("Raleway", Font.BOLD, 14));
         
-        String education[] = {"Non-Graduate","Graduate","Post-Graduate","Doctrate","Others"};
+        String education[] = {"Non-Graduate","Graduate",
+        		              "Post-Graduate","Doctrate",
+        		              "Others"};
         c4 = new JComboBox(education);
         c4.setBackground(Color.WHITE);
         c4.setFont(new Font("Raleway", Font.BOLD, 14));
         
-        String occupation[] = {"Salaried","Self-Employmed","Business","Student","Retired","Others"};
+        String occupation[] = {"Salaried","Self-Employmed",
+        		               "Business","Student","Retired",
+        		               "Others"};
         c5 = new JComboBox(occupation);
         c5.setBackground(Color.WHITE);
         c5.setFont(new Font("Raleway", Font.BOLD, 14));
@@ -234,10 +243,15 @@ public class Signup2 extends JFrame implements ActionListener{
         
         try{
             if(t2.getText().equals("")){
-                JOptionPane.showMessageDialog(null, "Fill all the required fields");
+                JOptionPane.showMessageDialog
+                (null, "Fill all the required fields");
             }else{
                 Conn c1 = new Conn();
-                String q1 = "insert into signuptwo values('"+formno+"','"+religion+"','"+category+"','"+income+"','"+education+"','"+occupation+"','"+pan+"','"+aadhar+"','"+scitizen+"','"+eaccount+"')";
+                String q1 = "insert into signuptwo values"
+                		+ "('"+formno+"','"+religion+"','"+category+"',"
+                		+ "'"+income+"','"+education+"','"+occupation+"',"
+                		+ "'"+pan+"','"+aadhar+"','"+scitizen+"',"
+                		+ "'"+eaccount+"')";
                 c1.s.executeUpdate(q1);
                 
                 new Signup3(formno).setVisible(true);

@@ -24,8 +24,10 @@ public class Signup extends JFrame implements ActionListener{
         
         setTitle("NEW ACCOUNT APPLICATION FORM");
         
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
+        ImageIcon i1 = new ImageIcon
+        		(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
+        Image i2 = i1.getImage().getScaledInstance
+        		(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l11 = new JLabel(i3);
         l11.setBounds(20, 0, 100, 100);
@@ -261,10 +263,15 @@ public class Signup extends JFrame implements ActionListener{
         try{
            
             if(t6.getText().equals("")){
-                JOptionPane.showMessageDialog(null, "Fill all the required fields");
+                JOptionPane.showMessageDialog
+                (null, "Fill all the required fields");
             }else{
                 Conn c1 = new Conn();
-                String q1 = "insert into signup values('"+formno+"','"+name+"','"+fname+"','"+dob+"','"+gender+"','"+email+"','"+marital+"','"+address+"','"+city+"','"+pincode+"','"+state+"')";
+                String q1 = "insert into signup values"
+                		+ "('"+formno+"','"+name+"','"+fname+"','"+dob+"',"
+                				+ "'"+gender+"','"+email+"','"+marital+"',"
+                				+ "'"+address+"','"+city+"','"+pincode+"',"
+                				+ "'"+state+"')";
                 c1.s.executeUpdate(q1);
                 
                 new Signup2(first).setVisible(true);

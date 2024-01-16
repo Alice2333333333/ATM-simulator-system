@@ -18,8 +18,10 @@ public class Signup3 extends JFrame implements ActionListener{
         this.formno = formno;
         setTitle("NEW ACCOUNT APPLICATION FORM - PAGE 3");
     
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource
+        		       ("ASimulatorSystem/icons/logo.jpg"));
+        Image i2 = i1.getImage().getScaledInstance
+        		   (100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l14 = new JLabel(i3);
         l14.setBounds(150, 0, 100, 100);
@@ -40,7 +42,8 @@ public class Signup3 extends JFrame implements ActionListener{
         l5 = new JLabel("(Your 16-digit Card number)");
         l5.setFont(new Font("Raleway", Font.BOLD, 12));
         
-        l6 = new JLabel("It would appear on ATM Card/Cheque Book and Statements");
+        l6 = new JLabel("It would appear on ATM Card"
+        	         	+ "/Cheque Book and Statements");
         l6.setFont(new Font("Raleway", Font.BOLD, 12));
         
         l7 = new JLabel("PIN:");
@@ -96,7 +99,9 @@ public class Signup3 extends JFrame implements ActionListener{
         c6.setBackground(Color.WHITE);
         c6.setFont(new Font("Raleway", Font.BOLD, 16));
         
-        c7 = new JCheckBox("I hereby declares that the above entered details correct to th best of my knowledge.",true);
+        c7 = new JCheckBox("I hereby declares that the "
+        		           + "above entered details correct to th best of my knowledge."
+        		           ,true);
         c7.setBackground(Color.WHITE);
         c7.setFont(new Font("Raleway", Font.BOLD, 12));
          
@@ -257,14 +262,18 @@ public class Signup3 extends JFrame implements ActionListener{
             if(ae.getSource()==b1){
                 
                 if(atype.equals("")){
-                    JOptionPane.showMessageDialog(null, "Fill all the required fields");
+                    JOptionPane.showMessageDialog
+                    (null, "Fill all the required fields");
                 }else{
                     Conn c1 = new Conn();
-                    String q1 = "insert into signupthree values('"+formno+"','"+atype+"','"+cardno+"','"+pin+"','"+facility+"')";  
-                    String q2 = "insert into login values('"+formno+"','"+cardno+"','"+pin+"')";
+                    String q1 = "insert into signupthree values('"+formno+"',"
+                    		    + " '"+atype+"','"+cardno+"','"+pin+"','"+facility+"')";  
+                    String q2 = "insert into login values('"+formno+"',"
+                    		    + "  '"+cardno+"','"+pin+"')";
                     c1.s.executeUpdate(q1);
                     c1.s.executeUpdate(q2);
-                    JOptionPane.showMessageDialog(null, "Card Number: " + cardno + "\n Pin:"+ pin);
+                    JOptionPane.showMessageDialog(null, "Card Number: " 
+                                                  + cardno + "\n Pin:"+ pin);
                     
                     new Deposit(pin).setVisible(true);
                     setVisible(false);

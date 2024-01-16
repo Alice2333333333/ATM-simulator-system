@@ -20,8 +20,10 @@ class BalanceEnquiry extends JFrame implements ActionListener {
     BalanceEnquiry(String pin) {
         this.pin = pin;
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource
+        		       ("ASimulatorSystem/icons/atm.jpg"));
+        Image i2 = i1.getImage().getScaledInstance
+        		   (1000, 1180, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l3 = new JLabel(i3);
         l3.setBounds(0, 0, 960, 1080);
@@ -43,7 +45,8 @@ class BalanceEnquiry extends JFrame implements ActionListener {
         int balance = 0;
         try{
             Conn c1 = new Conn();
-            ResultSet rs = c1.s.executeQuery("select * from bank where pin = '"+pin+"'");
+            ResultSet rs = c1.s.executeQuery
+            		       ("select * from bank where pin = '"+pin+"'");
             while (rs.next()) {
                 if (rs.getString("mode").equals("Deposit")) {
                     balance += Integer.parseInt(rs.getString("amount"));

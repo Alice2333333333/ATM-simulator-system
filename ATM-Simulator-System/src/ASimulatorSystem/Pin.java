@@ -14,8 +14,10 @@ public class Pin extends JFrame implements ActionListener{
     String pin;
     Pin(String pin){
         this.pin = pin;
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
+        ImageIcon i1 = new ImageIcon
+        		(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
+        Image i2 = i1.getImage().getScaledInstance
+        		(1000, 1180, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l4 = new JLabel(i3);
         l4.setBounds(0, 0, 960, 1080);
@@ -81,7 +83,8 @@ public class Pin extends JFrame implements ActionListener{
             String rpin = t2.getText();
             
             if(!npin.equals(rpin)){
-                JOptionPane.showMessageDialog(null, "Entered PIN does not match");
+                JOptionPane.showMessageDialog
+                (null, "Entered PIN does not match");
                 return;
             }
             
@@ -94,9 +97,12 @@ public class Pin extends JFrame implements ActionListener{
                 }
                 
                 Conn c1 = new Conn();
-                String q1 = "update bank set pin = '"+rpin+"' where pin = '"+pin+"' ";
-                String q2 = "update login set pin = '"+rpin+"' where pin = '"+pin+"' ";
-                String q3 = "update signup3 set pin = '"+rpin+"' where pin = '"+pin+"' ";
+                String q1 = "update bank set pin = "
+                		+ "'"+rpin+"' where pin = '"+pin+"' ";
+                String q2 = "update login set pin = "
+                		+ "'"+rpin+"' where pin = '"+pin+"' ";
+                String q3 = "update signup3 set pin = "
+                		+ "'"+rpin+"' where pin = '"+pin+"' ";
 
                 c1.s.executeUpdate(q1);
                 c1.s.executeUpdate(q2);

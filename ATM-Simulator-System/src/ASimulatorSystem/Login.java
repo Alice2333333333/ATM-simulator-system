@@ -14,8 +14,10 @@ public class Login extends JFrame implements ActionListener{
     Login(){
         setTitle("AUTOMATED TELLER MACHINE");
         
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource
+        		("ASimulatorSystem/icons/logo.jpg"));
+        Image i2 = i1.getImage().getScaledInstance
+        		   (100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l11 = new JLabel(i3);
         l11.setBounds(70, 10, 100, 100);
@@ -89,14 +91,16 @@ public class Login extends JFrame implements ActionListener{
                 Conn c1 = new Conn();
                 String cardno  = tf1.getText();
                 String pin  = pf2.getText();
-                String q  = "select * from login where cardno = '"+cardno+"' and pin = '"+pin+"'";
+                String q  = "select * from login "
+                		+ "where cardno = '"+cardno+"' and pin = '"+pin+"'";
 
                 ResultSet rs = c1.s.executeQuery(q);
                 if(rs.next()){
                     setVisible(false);
                     new Transactions(pin).setVisible(true);
                 }else{
-                    JOptionPane.showMessageDialog(null, "Incorrect Card Number or PIN");
+                    JOptionPane.showMessageDialog
+                    (null, "Incorrect Card Number or PIN");
                 }
             }else if(ae.getSource()==b2){
                 tf1.setText("");
