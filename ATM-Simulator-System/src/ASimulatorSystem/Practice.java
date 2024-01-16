@@ -31,7 +31,7 @@ public final class Practice {
                                 * 0.5870 + (double) pixelColor.getGreen() 
                                 * 0.1140;
                 final char s = negative ? returnStrNeg(gValue) 
-                		       : returnStrPos(gValue);
+                               : returnStrPos(gValue);
                 sb.append(s);
             }
         }

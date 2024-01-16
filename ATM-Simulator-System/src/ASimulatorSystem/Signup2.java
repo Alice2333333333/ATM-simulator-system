@@ -108,7 +108,7 @@ public class Signup2 extends JFrame implements ActionListener{
         c2.setFont(new Font("Raleway", Font.BOLD, 14));
         
         String income[] = {"Null","<1,50,000","<2,50,000",
-        		           "<5,00,000","Upto 10,00,000",
+                           "<5,00,000","Upto 10,00,000",
         		           "Above 10,00,000"};
         c3 = new JComboBox(income);
         c3.setBackground(Color.WHITE);

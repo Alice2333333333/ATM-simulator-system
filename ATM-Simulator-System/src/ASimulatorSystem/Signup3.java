@@ -43,7 +43,7 @@ public class Signup3 extends JFrame implements ActionListener{
         l5.setFont(new Font("Raleway", Font.BOLD, 12));
         
         l6 = new JLabel("It would appear on ATM Card"
-        	         	+ "/Cheque Book and Statements");
+                         + "/Cheque Book and Statements");
         l6.setFont(new Font("Raleway", Font.BOLD, 12));
         
         l7 = new JLabel("PIN:");
