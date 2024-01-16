@@ -3,7 +3,7 @@ package ASimulatorSystem;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import java.sql.*;
+import java.sql.ResultSet;
 
 public class MiniStatement extends JFrame implements ActionListener{
  

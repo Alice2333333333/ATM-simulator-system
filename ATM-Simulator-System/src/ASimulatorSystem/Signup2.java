@@ -4,7 +4,6 @@ package ASimulatorSystem;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import java.sql.*;
 
 public class Signup2 extends JFrame implements ActionListener{
     

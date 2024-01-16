@@ -5,7 +5,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.util.Date;
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Withdrawl extends JFrame implements ActionListener {
 
@@ -75,11 +76,11 @@ public class Withdrawl extends JFrame implements ActionListener {
             Date date = new Date();
             if (ae.getSource() == b1) {
                 if (t1.getText().equals("")) {
-                    JOptionPane.showMessageDialog(null, "Please enter the Amount to you want to Withdraw");
+                    JOptionPane.showMessageDialog(null, "Please enter the Amount you want to Withdraw");
                 } else {
                     withdrawMoney(amount, pin, date);
                 }
-            } else if (ae.getSource() == b2) {
+            } else if (ae.getSource().equals(b2)) {
                 setVisible(false);
                 new Transactions(pin).setVisible(true);
             }
@@ -87,7 +88,6 @@ public class Withdrawl extends JFrame implements ActionListener {
             e.printStackTrace();
             System.out.println("error: " + e);
         }
-
     }
 
     public void withdrawMoney(String amount, String pin, Date date) throws SQLException {

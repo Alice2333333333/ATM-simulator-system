@@ -1,10 +1,14 @@
 
 package ASimulatorSystem;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
-import java.util.*;
+import java.util.Date;
+
 
 public class Deposit extends JFrame implements ActionListener{
     

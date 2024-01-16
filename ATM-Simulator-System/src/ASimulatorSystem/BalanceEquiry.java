@@ -1,10 +1,10 @@
 package ASimulatorSystem;
 
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import javax.swing.*;
-import java.util.*;
 
 class BalanceEnquiry extends JFrame implements ActionListener {
 
