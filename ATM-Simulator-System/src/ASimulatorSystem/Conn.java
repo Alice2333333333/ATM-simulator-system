@@ -1,6 +1,8 @@
 package ASimulatorSystem;
 
-import java.sql.*;  
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 public class Conn{
     Connection c;
@@ -12,9 +14,6 @@ public class Conn{
             Class.forName("com.mysql.jdbc.Driver");  
             c =DriverManager.getConnection("jdbc:mysql:///bankmanagementsystem","root","");    
             s =c.createStatement(); 
-           
-          
-            
         }catch(Exception e){ 
             System.out.println(e);
         }  

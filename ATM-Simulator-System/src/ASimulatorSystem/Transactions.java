@@ -1,15 +1,27 @@
 package ASimulatorSystem;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import java.sql.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class Transactions extends JFrame implements ActionListener{
 
     JLabel l1;
 
-    JButton b1,b2,b3,b4,b5,b6,b7;
+    JButton b1;
+    JButton b2;
+    JButton b3;
+    JButton b4;
+    JButton b5;
+    JButton b6;
+    JButton b7;
 
     String pin;
     

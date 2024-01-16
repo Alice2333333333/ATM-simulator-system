@@ -1,21 +1,52 @@
 
 package ASimulatorSystem;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import java.sql.*;
-import java.util.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
+
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
 
 public class Signup3 extends JFrame implements ActionListener{
     
-    JLabel l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12;
+    JLabel l1;
+    JLabel l2;
+    JLabel l3;
+    JLabel l4;
+    JLabel l5;
+    JLabel l6;
+    JLabel l7;
+    JLabel l8;
+    JLabel l9;
+    JLabel l10;
+    JLabel l11;
+    JLabel l12;
 
-    JRadioButton r1,r2,r3,r4;
+    JRadioButton r1;
+    JRadioButton r2;
+    JRadioButton r3;
+    JRadioButton r4;
 
-    JButton b1,b2;
+    JButton b1;
+    JButton b2;
 
-    JCheckBox c1,c2,c3,c4,c5,c6,c7;
+    JCheckBox c1;
+    JCheckBox c2;
+    JCheckBox c3;
+    JCheckBox c4;
+    JCheckBox c5;
+    JCheckBox c6;
+    JCheckBox c7;
 
     String formno;
     
