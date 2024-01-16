@@ -47,7 +47,8 @@ public class MiniStatement extends JFrame implements ActionListener{
                 		l1.getText() + "<html>"+rs.getString("date")+ 
                 		"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + 
                 		rs.getString("mode") + 
-                		"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" 
+                		"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                		+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" 
                 		+ rs.getString("amount") + 
                 		"<br><br><html>"
                 		);
