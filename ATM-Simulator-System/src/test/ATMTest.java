@@ -17,11 +17,8 @@ public class ATMTest{
     Withdrawl withdrawl = new Withdrawl();
 
     ByteArrayOutputStream outstream = new ByteArrayOutputStream();
-    
     ByteArrayOutputStream errstream = new ByteArrayOutputStream();
-    
     PrintStream out = System.out;
-    
     PrintStream err = System.err;
 
     @Before
@@ -31,7 +28,7 @@ public class ATMTest{
 
     @Test
     public void TC01() throws SQLException{
-        withdrawl.withdrawMoney("2000", "3951" , new Date());
+        withdrawl.withdrawMoney("2000", "5222" , new Date());
         String expected_output = "Insufficient balance";
         String actual_output = outstream.toString();
         assertEquals(expected_output, actual_output);
