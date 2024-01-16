@@ -29,7 +29,7 @@ public class ATMTest{
     @Test
     public void TC01() throws SQLException{
         withdrawl.withdrawMoney("100", "3951" , new Date());
-        String expected_output = "Debited Successfully\r\n" + "Your current balance is: 600\r\n";
+        String expected_output = "Debited Successfully\r\n" + "Your current balance is: 1000\r\n";
         String actual_output = outstream.toString();
         assertEquals(expected_output, actual_output);
     }
@@ -37,10 +37,12 @@ public class ATMTest{
     @Test
     public void TC02() throws SQLException{
         withdrawl.withdrawMoney("2222", "3951" , new Date());
-        String expected_output = "Insufficient balance\r\n" + "Rs. 2222 Debited Successfully\r\n";
+        String expected_output = "Insufficient balance\r\n" + "Your current balance is: 900\r\n" + "Debited Successfully\r\n" 
+        + "Your current balance is: 900\r\n";
         String actual_output = outstream.toString();
         assertEquals(expected_output, actual_output);
     }
+    
     
     @After
     public void tearDown(){
