@@ -1,20 +1,35 @@
 
 package ASimulatorSystem;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
-import java.sql.*;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 public class Withdrawl extends JFrame implements ActionListener {
 
-    JTextField t1, t2;
+    JTextField t1;
+    JTextField t2;
 
-    JButton b1, b2, b3;
+    JButton b1;
+    JButton b2;
+    JButton b3;
 
-    JLabel l1, l2, l3, l4;
-    
+    JLabel l1;
+    JLabel l2;
+    JLabel l3;
+
     String pin;
 
     public Withdrawl(String pin) {

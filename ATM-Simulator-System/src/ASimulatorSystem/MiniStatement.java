@@ -1,13 +1,18 @@
 package ASimulatorSystem;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import java.sql.*;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class MiniStatement extends JFrame implements ActionListener{
  
-    JButton b1, b2;
+    JButton b1;
+    JButton b2;
 
     JLabel l1;
 

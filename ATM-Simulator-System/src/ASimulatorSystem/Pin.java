@@ -1,18 +1,30 @@
 
 package ASimulatorSystem;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import java.sql.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 
 public class Pin extends JFrame implements ActionListener{
     
-    JPasswordField t1,t2;
+    JPasswordField t1;
+    JPasswordField t2;
 
-    JButton b1,b2;          
+    JButton b1;          
+    JButton b2;          
 
-    JLabel l1,l2,l3;
+    JLabel l1;
+    JLabel l2;
+    JLabel l3;
 
     String pin;
     
