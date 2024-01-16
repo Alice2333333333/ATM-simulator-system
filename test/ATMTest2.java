@@ -28,8 +28,16 @@ public class ATMTest{
 
     @Test
     public void TC01() throws SQLException{
-        withdrawl.withdrawMoney("2000", "3951" , new Date());
-        String expected_output = "Insufficient balance";
+        withdrawl.withdrawMoney("0", "3951" , new Date());
+        String expected_output = "Insufficient balance \nYour current balance is: 0";
+        String actual_output = outstream.toString();
+        assertEquals(expected_output, actual_output);
+    }
+    
+    @Test
+    public void TC02() throws SQLException {
+    	withdrawl.withdrawMoney("100", "3951" , new Date());
+        String expected_output = "Rs. 100 Debited Successfully";
         String actual_output = outstream.toString();
         assertEquals(expected_output, actual_output);
     }
