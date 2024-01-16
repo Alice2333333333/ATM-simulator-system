@@ -116,9 +116,9 @@ public final class Practice {
             public void run() {
                 JFileChooser fileChooser = new JFileChooser();
                 fileChooser.setFileFilter(new FileNameExtensionFilter
-                		("Images", "jpg", "gif", "png"));
+                                         ("Images", "jpg", "gif", "png"));
                 while (fileChooser.showOpenDialog(null) 
-                		== JFileChooser.APPROVE_OPTION) {
+                       == JFileChooser.APPROVE_OPTION) {
                     try {
                         File f = fileChooser.getSelectedFile();
                         final BufferedImage image = ImageIO.read(f);

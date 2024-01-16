@@ -100,9 +100,9 @@ public class Pin extends JFrame implements ActionListener{
                 String q1 = "update bank set pin = "
                              + "'"+rpin+"' where pin = '"+pin+"' ";
                 String q2 = "update login set pin = "
-                		+ "'"+rpin+"' where pin = '"+pin+"' ";
+                             + "'"+rpin+"' where pin = '"+pin+"' ";
                 String q3 = "update signup3 set pin = "
-                		+ "'"+rpin+"' where pin = '"+pin+"' ";
+                             + "'"+rpin+"' where pin = '"+pin+"' ";
 
                 c1.s.executeUpdate(q1);
                 c1.s.executeUpdate(q2);
