@@ -35,8 +35,10 @@ public class FastCash extends JFrame implements ActionListener {
 
     FastCash(String pin) {
         this.pin = pin;
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
+        ImageIcon i1 = new ImageIcon(
+                ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
+        Image i2 = i1.getImage().getScaledInstance(
+                1000, 1180, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l3 = new JLabel(i3);
         l3.setBounds(0, 0, 960, 1080);
@@ -97,9 +99,11 @@ public class FastCash extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         try {
-            String amount = ((JButton) ae.getSource()).getText().substring(3); // k
+            String amount = ((JButton) ae.getSource())
+                    .getText().substring(3); // k
             Conn c = new Conn();
-            ResultSet rs = c.s.executeQuery("select * from bank where pin = '" + pin + "'");
+            ResultSet rs = c.s.executeQuery(
+                    "select * from bank where pin = '" + pin + "'");
             int balance = 0;
             while (rs.next()) {
                 if (rs.getString("mode").equals("Deposit")) {
@@ -109,7 +113,8 @@ public class FastCash extends JFrame implements ActionListener {
                 }
             }
             if (ae.getSource() != b7 && balance < Integer.parseInt(amount)) {
-                JOptionPane.showMessageDialog(null, "Insuffient Balance");
+                JOptionPane.showMessageDialog(
+                        null, "Insuffient Balance");
                 return;
             }
 
@@ -119,8 +124,12 @@ public class FastCash extends JFrame implements ActionListener {
             } else {
                 Date date = new Date();
                 c.s.executeUpdate(
-                        "insert into bank values('" + pin + "', '" + date + "', 'Withdrawl', '" + amount + "')");
-                JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully");
+                        "insert into bank values('" +
+                                pin + "', '" +
+                                date + "', 'Withdrawl', '" +
+                                amount + "')");
+                JOptionPane.showMessageDialog(
+                        null, "Rs. " + amount + " Debited Successfully");
 
                 setVisible(false);
                 new Transactions(pin).setVisible(true);
