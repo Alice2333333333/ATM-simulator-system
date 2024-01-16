@@ -21,14 +21,14 @@ public final class Practice {
 
     public String convert(final BufferedImage image) {
         StringBuilder sb = new StringBuilder(
-        		(image.getWidth() + 1) * image.getHeight());
+                           (image.getWidth() + 1) * image.getHeight());
         for (int y = 0; y < image.getHeight(); y++) {
             if (sb.length() != 0) sb.append("\n");
             for (int x = 0; x < image.getWidth(); x++) {
                 Color pixelColor = new Color(image.getRGB(x, y));
                 double gValue = (double) pixelColor.getRed() 
                 		* 0.2989 + (double) pixelColor.getBlue() 
-                		* 0.5870 + (double) pixelColor.getGreen() * 0.1140;
+                        * 0.5870 + (double) pixelColor.getGreen() * 0.1140;
                 final char s = negative ? returnStrNeg(gValue) 
                 		       : returnStrPos(gValue);
                 sb.append(s);
@@ -125,18 +125,18 @@ public final class Practice {
                         (f + " is not a valid image.");
                         final String ascii = new Practice().convert(image);
                         final JTextArea textArea = new JTextArea
-                        		(ascii, image.getHeight(), image.getWidth());
+                                                   (ascii, image.getHeight(), image.getWidth());
                         textArea.setFont(new Font("Monospaced", Font.BOLD, 5));
                         textArea.setEditable(false);
                         final JDialog dialog = new JOptionPane
                         		(new JScrollPane(textArea), 
-                        				JOptionPane.PLAIN_MESSAGE).createDialog
+                                 JOptionPane.PLAIN_MESSAGE).createDialog
                         		(Practice.class.getName());
                         dialog.setResizable(true);
                         dialog.setVisible(true);
                     } catch (Exception e) {
-                        JOptionPane.showMessageDialog(null, e.toString(), "Error"
-                        		, JOptionPane.ERROR_MESSAGE);
+                      JOptionPane.showMessageDialog(null, e.toString(), "Error"
+                    , JOptionPane.ERROR_MESSAGE);
                     }
                 }
                 System.exit(0);

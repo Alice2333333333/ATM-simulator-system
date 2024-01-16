@@ -15,7 +15,7 @@ public class Login extends JFrame implements ActionListener{
         setTitle("AUTOMATED TELLER MACHINE");
         
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource
-        		("ASimulatorSystem/icons/logo.jpg"));
+                       ("ASimulatorSystem/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance
         		   (100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -92,7 +92,7 @@ public class Login extends JFrame implements ActionListener{
                 String cardno  = tf1.getText();
                 String pin  = pf2.getText();
                 String q  = "select * from login "
-                		+ "where cardno = '"+cardno+"' and pin = '"+pin+"'";
+                             + "where cardno = '"+cardno+"' and pin = '"+pin+"'";
 
                 ResultSet rs = c1.s.executeQuery(q);
                 if(rs.next()){

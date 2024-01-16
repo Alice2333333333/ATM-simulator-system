@@ -19,7 +19,7 @@ public class Signup3 extends JFrame implements ActionListener{
         setTitle("NEW ACCOUNT APPLICATION FORM - PAGE 3");
     
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource
-        		       ("ASimulatorSystem/icons/logo.jpg"));
+                       ("ASimulatorSystem/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance
         		   (100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -100,7 +100,8 @@ public class Signup3 extends JFrame implements ActionListener{
         c6.setFont(new Font("Raleway", Font.BOLD, 16));
         
         c7 = new JCheckBox("I hereby declares that the "
-        		           + "above entered details correct to th best of my knowledge."
+        		           + "above entered details "
+        		           + "correct to th best of my knowledge."
         		           ,true);
         c7.setBackground(Color.WHITE);
         c7.setFont(new Font("Raleway", Font.BOLD, 12));
@@ -267,7 +268,8 @@ public class Signup3 extends JFrame implements ActionListener{
                 }else{
                     Conn c1 = new Conn();
                     String q1 = "insert into signupthree values('"+formno+"',"
-                    		    + " '"+atype+"','"+cardno+"','"+pin+"','"+facility+"')";  
+                    		    + " '"+atype+"','"+cardno+"','"+pin+"','"
+                    		    +facility+"')";  
                     String q2 = "insert into login values('"+formno+"',"
                     		    + "  '"+cardno+"','"+pin+"')";
                     c1.s.executeUpdate(q1);

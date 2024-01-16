@@ -16,7 +16,7 @@ public class FastCash extends JFrame implements ActionListener {
     FastCash(String pin) {
         this.pin = pin;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource
-        		("ASimulatorSystem/icons/atm.jpg"));
+                       ("ASimulatorSystem/icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance
         		(1000, 1180, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -103,7 +103,7 @@ public class FastCash extends JFrame implements ActionListener {
             }else{
                 Date date = new Date();
                 c.s.executeUpdate("insert into bank values"
-                		+ "('"+pin+"', '"+date+"', 'Withdrawl', '"+amount+"')");
+                                  + "('"+pin+"', '"+date+"', 'Withdrawl', '"+amount+"')");
                 JOptionPane.showMessageDialog
                 (null, "Rs. "+amount+" Debited Successfully");
                     

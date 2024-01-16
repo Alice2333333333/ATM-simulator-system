@@ -15,7 +15,7 @@ public class Deposit extends JFrame implements ActionListener{
     Deposit(String pin){
         this.pin = pin;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource
-        		("ASimulatorSystem/icons/atm.jpg"));
+                       ("ASimulatorSystem/icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance
         		(1000, 1180, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);

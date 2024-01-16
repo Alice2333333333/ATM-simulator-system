@@ -17,8 +17,8 @@ public class Signup2 extends JFrame implements ActionListener{
     Signup2(String formno){
         
         ImageIcon i1 = new ImageIcon
-        		       (ClassLoader.getSystemResource
-        		       ("ASimulatorSystem/icons/logo.jpg"));
+                       (ClassLoader.getSystemResource
+                       ("ASimulatorSystem/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance
         		   (100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -249,7 +249,7 @@ public class Signup2 extends JFrame implements ActionListener{
                 Conn c1 = new Conn();
                 String q1 = "insert into signuptwo values"
                 		+ "('"+formno+"','"+religion+"','"+category+"',"
-                		+ "'"+income+"','"+education+"','"+occupation+"',"
+                        + "'"+income+"','"+education+"','"+occupation+"',"
                 		+ "'"+pan+"','"+aadhar+"','"+scitizen+"',"
                 		+ "'"+eaccount+"')";
                 c1.s.executeUpdate(q1);

@@ -25,7 +25,7 @@ public class Signup extends JFrame implements ActionListener{
         setTitle("NEW ACCOUNT APPLICATION FORM");
         
         ImageIcon i1 = new ImageIcon
-        		(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
+                       (ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance
         		(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -268,10 +268,10 @@ public class Signup extends JFrame implements ActionListener{
             }else{
                 Conn c1 = new Conn();
                 String q1 = "insert into signup values"
-                		+ "('"+formno+"','"+name+"','"+fname+"','"+dob+"',"
-                				+ "'"+gender+"','"+email+"','"+marital+"',"
-                				+ "'"+address+"','"+city+"','"+pincode+"',"
-                				+ "'"+state+"')";
+                            + "('"+formno+"','"+name+"','"+fname+"','"+dob+"',"
+                            + "'"+gender+"','"+email+"','"+marital+"',"
+                            + "'"+address+"','"+city+"','"+pincode+"',"
+                            + "'"+state+"')";
                 c1.s.executeUpdate(q1);
                 
                 new Signup2(first).setVisible(true);
