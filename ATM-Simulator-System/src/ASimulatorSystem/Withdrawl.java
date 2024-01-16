@@ -87,7 +87,7 @@ public class Withdrawl extends JFrame implements ActionListener {
     }
 
     public void withdrawMoney(String amount, String pin, 
-    						  Date date) throws SQLException {
+    		Date date) throws SQLException {
 
         Conn c1 = new Conn();
 
