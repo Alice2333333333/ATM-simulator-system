@@ -8,9 +8,14 @@ import java.util.*;
 
 class BalanceEnquiry extends JFrame implements ActionListener {
 
-    JTextField t1, t2;
-    JButton b1, b2, b3;
-    JLabel l1, l2, l3;
+    JTextField t1;
+    JTextField t2;
+    JButton b1;
+    JButton b2;
+    JButton b3;
+    JLabel l1;
+    JLabel l2;
+    JLabel l3;
     String pin;
     String address = "Malaysia";
     int postcode = 12345;
