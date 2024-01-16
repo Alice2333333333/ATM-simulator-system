@@ -10,8 +10,11 @@ import java.sql.*;
 public class Withdrawl extends JFrame implements ActionListener {
 
     JTextField t1, t2;
+
     JButton b1, b2, b3;
+
     JLabel l1, l2, l3, l4;
+    
     String pin;
 
     public Withdrawl(String pin) {

@@ -9,13 +9,12 @@ import java.util.*;
 class BalanceEnquiry extends JFrame implements ActionListener {
 
     JTextField t1, t2;
+
     JButton b1, b2, b3;
+
     JLabel l1, l2, l3;
+    
     String pin;
-    String address = "Malaysia";
-    int postcode = 12345;
-    String name ="Ben";
-    int age = 0;
 
     BalanceEnquiry(String pin) {
         this.pin = pin;

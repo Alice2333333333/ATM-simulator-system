@@ -10,10 +10,15 @@ import java.util.*;
 public class Signup3 extends JFrame implements ActionListener{
     
     JLabel l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12;
+
     JRadioButton r1,r2,r3,r4;
+
     JButton b1,b2;
+
     JCheckBox c1,c2,c3,c4,c5,c6,c7;
+
     String formno;
+    
     Signup3(String formno){
         this.formno = formno;
         setTitle("NEW ACCOUNT APPLICATION FORM - PAGE 3");

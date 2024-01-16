@@ -7,8 +7,11 @@ import java.sql.*;
 
 public class Login extends JFrame implements ActionListener{
     JLabel l1,l2,l3;
+
     JTextField tf1;
+
     JPasswordField pf2;
+
     JButton b1,b2,b3;
   
     Login(){
@@ -83,6 +86,7 @@ public class Login extends JFrame implements ActionListener{
         setVisible(true);
         
     }
+
     public void actionPerformed(ActionEvent ae){
         try{        
             if(ae.getSource()==b1){
@@ -109,6 +113,7 @@ public class Login extends JFrame implements ActionListener{
             e.printStackTrace();
         }
     }
+    
     public static void main(String[] args){
         new Login().setVisible(true);
     }

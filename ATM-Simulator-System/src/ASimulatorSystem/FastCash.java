@@ -9,8 +9,11 @@ import java.util.Date;
 public class FastCash extends JFrame implements ActionListener {
 
     JLabel l1, l2;
+
     JButton b1, b2, b3, b4, b5, b6, b7, b8;
+
     JTextField t1;
+    
     String pin;
 
     FastCash(String pin) {

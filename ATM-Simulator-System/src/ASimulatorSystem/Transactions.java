@@ -8,8 +8,11 @@ import java.sql.*;
 public class Transactions extends JFrame implements ActionListener{
 
     JLabel l1;
+
     JButton b1,b2,b3,b4,b5,b6,b7;
+
     String pin;
+    
     Transactions(String pin){
         this.pin = pin;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
