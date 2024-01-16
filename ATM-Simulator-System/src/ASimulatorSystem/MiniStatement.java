@@ -8,7 +8,9 @@ import java.sql.*;
 public class MiniStatement extends JFrame implements ActionListener{
  
     JButton b1, b2;
+
     JLabel l1;
+
     MiniStatement(String pin){
         super("Mini Statement");
         getContentPane().setBackground(Color.WHITE);
@@ -64,6 +66,7 @@ public class MiniStatement extends JFrame implements ActionListener{
         l1.setBounds(20, 140, 400, 200);
         b1.setBounds(20, 500, 100, 25);
     }
+    
     public void actionPerformed(ActionEvent ae){
         this.setVisible(false);
     }

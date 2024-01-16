@@ -9,9 +9,13 @@ import java.sql.*;
 public class Pin extends JFrame implements ActionListener{
     
     JPasswordField t1,t2;
-    JButton b1,b2;                               
+
+    JButton b1,b2;          
+
     JLabel l1,l2,l3;
+
     String pin;
+    
     Pin(String pin){
         this.pin = pin;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));

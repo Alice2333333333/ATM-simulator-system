@@ -9,8 +9,11 @@ import java.util.*;
 class BalanceEnquiry extends JFrame implements ActionListener {
 
     JTextField t1, t2;
+
     JButton b1, b2, b3;
+
     JLabel l1, l2, l3;
+
     String pin;
 
     BalanceEnquiry(String pin) {
@@ -37,9 +40,9 @@ class BalanceEnquiry extends JFrame implements ActionListener {
         b1.setBounds(390, 633, 150, 35);
         l3.add(b1);
         int balance = 0;
-        try{
+        try {
             Conn c1 = new Conn();
-            ResultSet rs = c1.s.executeQuery("select * from bank where pin = '"+pin+"'");
+            ResultSet rs = c1.s.executeQuery("select * from bank where pin = '" + pin + "'");
             while (rs.next()) {
                 if (rs.getString("mode").equals("Deposit")) {
                     balance += Integer.parseInt(rs.getString("amount"));
@@ -47,9 +50,10 @@ class BalanceEnquiry extends JFrame implements ActionListener {
                     balance -= Integer.parseInt(rs.getString("amount"));
                 }
             }
-        }catch(Exception e){}
-        
-        l1.setText("Your Current Account Balance is Rs "+balance);
+        } catch (Exception e) {
+        }
+
+        l1.setText("Your Current Account Balance is Rs " + balance);
 
         b1.addActionListener(this);
 

@@ -7,8 +7,11 @@ import java.sql.*;
 
 public class Login extends JFrame implements ActionListener{
     JLabel l1,l2,l3;
+
     JTextField tf1;
+
     JPasswordField pf2;
+
     JButton b1,b2,b3;
   
     Login(){
@@ -83,13 +86,14 @@ public class Login extends JFrame implements ActionListener{
         setVisible(true);
         
     }
+
     public void actionPerformed(ActionEvent ae){
         try{        
             if(ae.getSource()==b1){
                 Conn c1 = new Conn();
                 String cardno  = tf1.getText();
                 String pin  = pf2.getText();
-                String q  = "select * from login where cardno = '"+cardno+"' and pin = '"+pin+"'";
+                String q  = "select * from login where cardnumber = '"+cardno+"' and pin = '"+pin+"'";
 
                 ResultSet rs = c1.s.executeQuery(q);
                 if(rs.next()){
@@ -109,6 +113,7 @@ public class Login extends JFrame implements ActionListener{
             e.printStackTrace();
         }
     }
+    
     public static void main(String[] args){
         new Login().setVisible(true);
     }

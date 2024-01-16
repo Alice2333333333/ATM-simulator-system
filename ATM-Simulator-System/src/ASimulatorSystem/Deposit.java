@@ -9,9 +9,13 @@ import java.util.*;
 public class Deposit extends JFrame implements ActionListener{
     
     JTextField t1,t2;
+
     JButton b1,b2,b3;
+
     JLabel l1,l2,l3;
+
     String pin;
+    
     Deposit(String pin){
         this.pin = pin;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
