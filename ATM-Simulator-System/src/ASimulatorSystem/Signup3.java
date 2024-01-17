@@ -1,11 +1,20 @@
 
 package ASimulatorSystem;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JOptionPane;
 import java.sql.*;
-import java.util.*;
+import java.util.Random;
 
 public class Signup3 extends JFrame implements ActionListener{
     
