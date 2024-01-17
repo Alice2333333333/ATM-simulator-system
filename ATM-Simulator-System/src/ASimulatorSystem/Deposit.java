@@ -67,29 +67,29 @@ public class Deposit extends JFrame implements ActionListener{
         setVisible(true);
     }
     
-    public void actionPerformed(ActionEvent ae){
-        try{        
+    public void actionPerformed(ActionEvent ae) {
+        try {
             String amount = t1.getText();
             Date date = new Date();
-            if(ae.getSource()==b1){
-                if(t1.getText().equals("")){
-                    JOptionPane.showMessageDialog(null, "Please enter the Amount to you want to Deposit");
-                }else{
+            if (ae.getSource().equals(b1)) {
+                if (t1.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null, "Please enter the Amount you want to Deposit");
+                } else {
                     Conn c1 = new Conn();
-                    c1.s.executeUpdate("insert into bank values('"+pin+"', '"+date+"', 'Deposit', '"+amount+"')");
-                    JOptionPane.showMessageDialog(null, "Rs. "+amount+" Deposited Successfully");
+                    c1.s.executeUpdate("insert into bank values('" + pin + "', '" + date + "', 'Deposit', '" + amount + "')");
+                    JOptionPane.showMessageDialog(null, "Rs. " + amount + " Deposited Successfully");
                     setVisible(false);
                     new Transactions(pin).setVisible(true);
                 }
-            }else if(ae.getSource()==b2){
+            } else if (ae.getSource().equals(b2)) {
                 setVisible(false);
                 new Transactions(pin).setVisible(true);
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
-            
     }
+
     
     public static void main(String[] args){
         new Deposit("").setVisible(true);
